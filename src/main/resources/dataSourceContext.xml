@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--数据源上下文管理-->
+    <bean class="com.jolly.betc.dao.datasource.JcDataSourceContext">
+        <property name="dataSources">
+            <map>
+                <!--配置templates-->
+                <entry key="brand_read"  value-ref="template_brand_read"/>
+                <entry key="brand_write" value-ref="template_brand_write"/>
+            </map>
+        </property>
+    </bean>
+
+</beans>
